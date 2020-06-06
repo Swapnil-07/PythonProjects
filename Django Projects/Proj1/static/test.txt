@@ -1,0 +1,1 @@
+This is Text file stored in Static Folder of Project, to be served directly.
