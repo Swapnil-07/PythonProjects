@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# swapii - added all three lines in order to chnage the appearance of Admin Panel
+
 admin.site.site_header = "Swapii Says Admin"
 admin.site.site_title = "Swapii Says Admin Portal"
 admin.site.index_title = "Welcome to Swapii Says Portal"
