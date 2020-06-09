@@ -1,0 +1,42 @@
+Steps to Start Django Project - 
+
+(In CMD)
+1. run >> django-admin 
+2. run >> django-admin startproject proj_name
+
+(In VS Code after right clicking the proj_name folder)
+
+(VS Terminal)
+1. run >> python manage.py makemigrations
+2. run >> python manage.py migrate
+3. run >> python manage.py startapp app_name (to create a new app)
+
+(In VS Code Window)
+
+1. Add a "static" folder
+2. Add a "templates" folder
+3. Copy "App_NameConfig" from "apps.py" file
+4. Register your app "app_name" in settings
+	'app_name.apps.App_NameConfig' under 'INSTALLED_APPS' Section
+5. Register Static File Directory by adding following code in Settings.py file at bottom
+	STATICFILES_DIRS = [
+    		os.path.join(BASE_DIR, "static")
+	]
+6. Register Templates by adding following code in TEMPLATES Section of Settings.py
+	'DIRS': [os.path.join(BASE_DIR, "templates")]
+
+7. Add 'include' into import of projects 'urls.py'
+
+8. Add "path('', include('App_Name.urls'))" to "urlpatterns"
+
+9. Add a 'urls.py' file in 'App_Name' folder and copy all the code from 'urls.py' of project to it.
+
+10. Add below code like by replacing already present code in 'urlpatterns' of 'urls.py'
+	path('', views.index, name="home",),
+	path('login/', views.login, name="login")
+
+11. Create superUser 
+	run >> python manage.py createsuperuser
+	Enter name :
+	Enter email :
+	Enter pwd :
