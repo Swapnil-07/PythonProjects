@@ -1,4 +1,4 @@
-"""Proj1 URL Configuration
+"""UserProject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -14,15 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include   # swapii - add include into the import
 
 # swapii - added all three lines in order to chnage the appearance of Admin Panel
 
-admin.site.site_header = "Swapii Says Admin"
-admin.site.site_title = "Swapii Says Admin Portal"
-admin.site.index_title = "Welcome to Swapii Says Portal"
+admin.site.site_header = "Tech World Admin"
+admin.site.site_title = "Tech World Admin Portal"
+admin.site.index_title = "Welcome to Tech World Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls'))               # Swapii - Added to include URL of home in the project
+    path('', include('home.urls')),      # swapii - add this path to include urls of 'home' app
 ]

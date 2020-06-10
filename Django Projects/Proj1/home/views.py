@@ -28,7 +28,7 @@ def contact(request):
 
         contact = Contact(name=name, email=email, bio=bio, date=datetime.today())
         contact.save()
-        messages.success(request, 'Your Message has been Sent')
+        messages.success(request, 'Your Message has been Sent !')
 
     return render(request, 'contact.html')
     # return HttpResponse('This is Contact Us Page')
