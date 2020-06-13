@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee</title>
+</head>
+<body>
+    <h3>Edit Employee Details</h3>
+    <form method="POST" action='/update/{{employee.id}}'> 
+        {% csrf_token %}
+        <div class="form-group row">
+            <div class="col-sm-2">
+                Employee Id :
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="empId" id="txt_eId" value="{{employee.empId}}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                Employee Name :
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="empName" id="txt_eName" value="{{employee.empName}}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                Employee Email :
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="empEmail" id="txt_eEmail" value="{{employee.empEmail}}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                Employee Phone :
+            </div>
+            <div class="col-sm-4">
+                <input type="text" name="empPhone" id="txt_ePhone" value="{{employee.empPhone}}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary" >Update</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Employees</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                Employee ID
+            </td>
+            <td>
+                Employee Name
+            </td>
+            <td>
+                Employee Email
+            </td>
+            <td>
+                Employee Phone
+            </td>
+        </tr>
+
+        {% for emp in employees %}
+
+        <tr>
+            <td>
+                {{emp.empId}}
+            </td>
+            <td>
+                {{emp.empName}}
+            </td>
+            <td>
+                {{emp.empEmail}}
+            </td>
+            <td>
+                {{emp.empPhone}}
+            </td>
+            <td>
+                <a href="/edit/{{emp.id}}"> Edit</a>
+                <a href="/delete/{{emp.id}}"> Delete</a>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+</body>
+</html>
