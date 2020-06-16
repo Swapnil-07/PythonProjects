@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crud'                              #Only this is sufficient to install App ie just 'App_Name'
+    'crud',                              #Only this is sufficient to install App ie just 'App_Name'
+    'userModule'
 ]
 
 MIDDLEWARE = [

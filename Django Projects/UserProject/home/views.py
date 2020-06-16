@@ -14,7 +14,7 @@ def loginUser(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        # Check if user has entered correct Credentials
+        # Check if user has entered Correct Credentials
         user = authenticate(username=username, password=password)
         if user is not None:
             return redirect("/")
