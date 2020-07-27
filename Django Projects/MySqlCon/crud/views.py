@@ -25,7 +25,7 @@ def editEmp(request, id):
     employee = Employee.objects.get(id=id)
     return render(request, "edit.htm", {'employee':employee})
 
-def updateEmp(request, id):
+def updateEmp(request, id=0):
     employee = Employee.objects.get(id=id)
     form = EmployeeForm(request.POST, instance=employee)
     if form.is_valid():
